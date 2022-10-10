@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import ua.com.javarush.quest.sawyer.util.Jsp;
 
 @WebServlet(name = "main", value = "/main")
-public class MainPageServlet extends HttpServlet {
+public class HomePageServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) {
         Jsp.forward(request, response, "main");
