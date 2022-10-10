@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="MyApp" packages="">
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%highlight{%d %-5p [%t] %C{2} (%F:%L) - %m%n}"/>
+        </Console>
+
+        <File name="MyFile" fileName="src/main/java/logs/appLog.log">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="ALL">
+            <AppenderRef ref="STDOUT"/>
+            <AppenderRef ref="MyFile"/>
+        </Root>
+    </Loggers>
+</Configuration>
