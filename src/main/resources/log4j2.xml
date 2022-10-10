@@ -1,20 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="warn" name="MyApp" packages="">
+<?xml version="1.0" encoding="utf-8"?>
+<Configuration status="info">
+    <Properties>
+        <Property name="logdir">${env:PACK_URL}/logs</Property>
+        <Property name="layout">%d [%t] %-5p %c- %m%n</Property>
+    </Properties>
     <Appenders>
-        <Console name="STDOUT" target="SYSTEM_OUT">
-            <PatternLayout pattern="%highlight{%d %-5p [%t] %C{2} (%F:%L) - %m%n}"/>
+        <Console name="CONSOLE" target="SYSTEM_OUT">
+            <PatternLayout pattern="${layout}"/>
         </Console>
-
-        <File name="MyFile" fileName="src/main/java/logs/appLog.log">
-            <PatternLayout>
-                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
-            </PatternLayout>
-        </File>
+        <RollingFile name="QuestDeltaLog"
+                     fileName="${logdir}/questApp.log"
+                     filePattern="questApp.%d{yyyy-MM-dd}.log.gz">
+            <PatternLayout pattern="${layout}"/>
+            <CronTriggeringPolicy schedule="0 0 0 * * ?"/>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${logdir}" maxDepth="1">
+                    <IfFileName glob="questApp.*.log.gz" />
+                    <IfAccumulatedFileCount exceeds="10" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
     </Appenders>
     <Loggers>
         <Root level="ALL">
-            <AppenderRef ref="STDOUT"/>
-            <AppenderRef ref="MyFile"/>
+            <AppenderRef ref="QuestDeltaLog"/>
         </Root>
     </Loggers>
 </Configuration>

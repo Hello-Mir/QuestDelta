@@ -1,0 +1,6 @@
+2022-10-11 00:52:13,541 [http-nio-8080-exec-1] INFO  ua.com.javarush.quest.sawyer.controller.servlet.HomePageServlet- App started with request /quest_delta_war_exploded/main
+2022-10-11 00:52:13,622 [http-nio-8080-exec-4] INFO  ua.com.javarush.quest.sawyer.controller.servlet.HomePageServlet- App started with request /quest_delta_war_exploded/main
+2022-10-11 02:02:08,437 [http-nio-8080-exec-1] INFO  ua.com.javarush.quest.sawyer.controller.servlet.HomePageServlet- App started with request /quest_delta_war_exploded/main
+2022-10-11 02:02:08,502 [http-nio-8080-exec-4] INFO  ua.com.javarush.quest.sawyer.controller.servlet.HomePageServlet- App started with request /quest_delta_war_exploded/main
+2022-10-11 02:05:17,640 [http-nio-8080-exec-1] INFO  ua.com.javarush.quest.sawyer.controller.servlet.HomePageServlet- App started with request /quest_delta_war_exploded/main
+2022-10-11 02:05:17,708 [http-nio-8080-exec-4] INFO  ua.com.javarush.quest.sawyer.controller.servlet.HomePageServlet- App started with request /quest_delta_war_exploded/main
