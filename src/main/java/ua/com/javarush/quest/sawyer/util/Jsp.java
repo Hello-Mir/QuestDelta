@@ -11,7 +11,8 @@ import java.io.IOException;
 @UtilityClass
 public class Jsp {
     public void forward(HttpServletRequest request, HttpServletResponse response, String name) {
-        String page = "WEB-INF/jsp/%s.jsp".formatted(name);
+        String replaceSlash = name.replace("/", "");
+        String page = "WEB-INF/jsp/%s.jsp".formatted(replaceSlash);
         RequestDispatcher dispatcher = request.getRequestDispatcher(page);
         try {
             dispatcher.forward(request, response);

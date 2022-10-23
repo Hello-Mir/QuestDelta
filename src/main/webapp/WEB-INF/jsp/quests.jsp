@@ -4,7 +4,7 @@
     <title>Quests</title>
 </head>
 <body>
-<h1><%= "Herea will be a quests soon. Now go home" %>
+<h1><%= "Here will be a quests soon. Now go home" %>
 </h1>
 <br/>
 <a href="quests">Go home</a>
